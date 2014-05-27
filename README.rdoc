@@ -19,4 +19,5 @@ In your rails console, let's see the changes
   
 Horray!
 
+Now, look at the code to make that happen: https://github.com/jkappers/faux/blob/master/lib/tasks/data.rake
 
