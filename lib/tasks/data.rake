@@ -22,6 +22,6 @@ end
 namespace :data do
   task :scrub => :environment do
     scrubber = Scrubber.new
-    scrubber.scrub(User)
+    scrubber.scrub(User) # You could pass as many models as you'd like e.g. scrub(User, Admin)
   end  
 end
