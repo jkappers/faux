@@ -1,28 +1,22 @@
-== README
+Install
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+  bundle
+  rake db:create db:migrate db:seed
 
-Things you may want to cover:
+Let's look at the users in the system
 
-* Ruby version
+  rails c
+  User.all
+  Admin.all
 
-* System dependencies
+Cool, now let's scrub the data. In a new terminal window:
 
-* Configuration
+  rake data:scrub
+  
+In your rails console, let's see the changes
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  User.all
+  
+Horray!
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
