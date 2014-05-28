@@ -12,10 +12,8 @@ class Scrubber
   end
 
   def fake(model)
-    VALUE_PROVIDERS.each do |key, method|
-      model.send("#{key}=", method.call) if model.respond_to?("#{key}=")
-      model.save
-    end
+    VALUE_PROVIDERS.each { |key, method| model.send("#{key}=", method.call) if model.respond_to?("#{key}=") }
+    model.save
   end
 end
 
